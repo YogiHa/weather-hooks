@@ -29,7 +29,6 @@ function Dispaly({data}){
     const HandleClick = e => {
       e.preventDefault();
      celzios= !celzios
-     console.log(celzios)
     }  
 		return <div>
      <h1> {celzios ? data.main.temp :
