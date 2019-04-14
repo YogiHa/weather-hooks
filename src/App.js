@@ -25,7 +25,17 @@ function Input({sendLocation}){
 };
 function Dispaly({data}){
 	if(data.base === 'stations'){
-		return <h1> {data.main.temp}</h1>
+    let celzios = true;
+    const HandleClick = e => {
+      e.preventDefault();
+     celzios= !celzios
+     console.log(celzios)
+    }  
+		return <div>
+     <h1> {celzios ? data.main.temp :
+    (1.8 * data.main.temp + 32)}</h1>
+      <button onClick={HandleClick} >C/F</button>
+      </div>
 	} else
 {return <div> waiting for searches </div>}
 }
@@ -33,7 +43,7 @@ function Dispaly({data}){
 function Forcast({location}){
 	let ignore = false;
 	const [data, setData] = useState([])
-	const apiKey = //API-Key;
+	const apiKey = //APIKey;
 	useEffect(()=> {
 		async function fetchData() {
       const result = await axios(`http://api.openweathermap.org/data/2.5/weather?q=${location.text}&units=metric&appid=${apiKey}`)
