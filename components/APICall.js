@@ -2,7 +2,7 @@ import React, { useState , useEffect } from "react";
 import axios from 'axios';
 import Display from './Display';
 
-function Forcast({location}){
+function APICall({location}){
 	let ignore = false;
 	const [data, setData] = useState([])
 	const apiKey = 'd2cb9ea67b28bb32949f13c1ffb2b803';
@@ -16,4 +16,4 @@ function Forcast({location}){
     return () => { ignore = true; }	}}, [location])
 return (<Display data={data}/>) }
 
-export default Forcast;
+export default APICall;
