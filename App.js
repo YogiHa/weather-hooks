@@ -23,26 +23,38 @@ function Input({sendLocation}){
 
   );
 };
-function Dispaly({data}){
-	if(data.base === 'stations'){
-    let celzios = true;
+function Degree({degree}) {
+ const [unit, setUnit] = useState(degree)
+ let celzios = true;
     const HandleClick = e => {
       e.preventDefault();
-     celzios= !celzios
+       celzios= !celzios
+     if(!celzios){setUnit(1.8 * degree + 32)}
+      else{setUnit(degree)}
+    
+     
     }  
+  //  
+  return <div> <h2>{unit} </h2>
+      <button onClick={HandleClick} >C/F</button> </div>
+}
+function Dispaly({data}){
+	if(data.base === 'stations'){
 		return <div>
-     <h1> {celzios ? data.main.temp :
-    (1.8 * data.main.temp + 32)}</h1>
-      <button onClick={HandleClick} >C/F</button>
+    <h1>{data.name} </h1>
+    <Degree degree={data.main.temp}/>
+    <h3> wind: {data.wind.speed}, {data.wind.deg} </h3>
       </div>
-	} else
+    }
+    
+	 else
 {return <div> waiting for searches </div>}
 }
 
 function Forcast({location}){
 	let ignore = false;
 	const [data, setData] = useState([])
-	const apiKey = 'd2cb9ea67b28bb32949f13c1ffb2b803';
+	const apiKey = //apikey;
 	useEffect(()=> {
 		async function fetchData() {
       const result = await axios(`http://api.openweathermap.org/data/2.5/weather?q=${location.text}&units=metric&appid=${apiKey}`)
