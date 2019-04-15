@@ -5,7 +5,7 @@ import Display from './Display';
 function APICall({location}){
 	let ignore = false;
 	const [data, setData] = useState([])
-	const apiKey = 'd2cb9ea67b28bb32949f13c1ffb2b803';
+	const apiKey = //APIKEY
 	useEffect(()=> {
 		async function fetchData() {
       const result = await axios(`http://api.openweathermap.org/data/2.5/weather?q=${location.text}&units=metric&appid=${apiKey}`)
