@@ -35,7 +35,7 @@ function Degree({degree}) {
      
     }  
   //  
-  return <div> <h2>{unit} </h2>
+  return <div> <h2>{unit}° </h2>
       <button onClick={HandleClick} >C/F</button> </div>
 }
 function Dispaly({data}){
@@ -43,7 +43,7 @@ function Dispaly({data}){
 		return <div>
     <h1>{data.name} </h1>
     <Degree degree={data.main.temp}/>
-    <h3> wind: {data.wind.speed}, {data.wind.deg} </h3>
+    <h3> humidity: {data.main.humidity}% </h3>
       </div>
     }
     
@@ -54,7 +54,7 @@ function Dispaly({data}){
 function Forcast({location}){
 	let ignore = false;
 	const [data, setData] = useState([])
-	const apiKey = //apikey;
+	const apiKey = //APIKey;
 	useEffect(()=> {
 		async function fetchData() {
       const result = await axios(`http://api.openweathermap.org/data/2.5/weather?q=${location.text}&units=metric&appid=${apiKey}`)
