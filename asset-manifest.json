@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/weather-hooks/static/css/main.7a990bfb.chunk.css",
+    "main.js": "/weather-hooks/static/js/main.b74f77b9.chunk.js",
+    "main.js.map": "/weather-hooks/static/js/main.b74f77b9.chunk.js.map",
+    "runtime~main.js": "/weather-hooks/static/js/runtime~main.39c08578.js",
+    "runtime~main.js.map": "/weather-hooks/static/js/runtime~main.39c08578.js.map",
+    "static/js/2.cf29e8fd.chunk.js": "/weather-hooks/static/js/2.cf29e8fd.chunk.js",
+    "static/js/2.cf29e8fd.chunk.js.map": "/weather-hooks/static/js/2.cf29e8fd.chunk.js.map",
+    "index.html": "/weather-hooks/index.html",
+    "precache-manifest.cba7cfcf0d8e0608c134d6bf2bcbb6e5.js": "/weather-hooks/precache-manifest.cba7cfcf0d8e0608c134d6bf2bcbb6e5.js",
+    "service-worker.js": "/weather-hooks/service-worker.js",
+    "static/css/main.7a990bfb.chunk.css.map": "/weather-hooks/static/css/main.7a990bfb.chunk.css.map",
+    "static/media/App.css": "/weather-hooks/static/media/bg.c8cc95c6.jpg"
+  }
+}
