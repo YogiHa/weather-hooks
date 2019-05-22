@@ -5,10 +5,10 @@ import Display from './Display';
 function APICall({location}){
 	let ignore = false;
 	const [data, setData] = useState([]);
-	const apiKey = //APIKEY
+	const apiKey = //your api key goes here
 	useEffect(()=> {
 		async function fetchData() {
-      const result = await axios(`http://api.openweathermap.org/data/2.5/weather?q=${location.text}&units=metric&appid=${apiKey}`)
+      const result = await axios(`https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?q=${location.text}&units=metric&appid=${apiKey}`)
 	  if (!ignore) setData(result.data);    }
     if (location.text === undefined) {
     	return () => {ignore = false}    }

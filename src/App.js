@@ -7,7 +7,11 @@ import HistoryItem from './components/HistoryItem';
 function App() {
 const [location, setLocation] = useState('');
 const [list, setList] = useState([]);
-
+  const [count, setCount] = useState(0);
+  const handleClick = e => {
+    e.preventDefault();
+    setCount(count + 1)
+  }
 const sendLocation = text => {
   setLocation({text}) 
   const newList = [...list, {text}]
@@ -26,7 +30,9 @@ setLocation(index)
     return (
       <div className="App">
       <h1> WethWhat? </h1>
-      <h4> displaying temprture by just click enter! </h4>
+          <button onClick={handleClick}> Count: {count} </button>
+          <p> i'm working offline! </p>
+      <h4> displaying temprture by just clicking enter! </h4>
       <Input sendLocation={sendLocation} />
       <APICall location={location}  />
       <div>
