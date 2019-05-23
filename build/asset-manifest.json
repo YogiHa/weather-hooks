@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/weather-hooks/static/css/main.45774fcf.chunk.css",
-    "main.js": "/weather-hooks/static/js/main.5fe06add.chunk.js",
-    "main.js.map": "/weather-hooks/static/js/main.5fe06add.chunk.js.map",
+    "main.js": "/weather-hooks/static/js/main.2a32dda4.chunk.js",
+    "main.js.map": "/weather-hooks/static/js/main.2a32dda4.chunk.js.map",
     "runtime~main.js": "/weather-hooks/static/js/runtime~main.39c08578.js",
     "runtime~main.js.map": "/weather-hooks/static/js/runtime~main.39c08578.js.map",
     "static/js/2.cf29e8fd.chunk.js": "/weather-hooks/static/js/2.cf29e8fd.chunk.js",
     "static/js/2.cf29e8fd.chunk.js.map": "/weather-hooks/static/js/2.cf29e8fd.chunk.js.map",
     "index.html": "/weather-hooks/index.html",
-    "precache-manifest.ce1f855dbef29cadcebeca68d5ed729a.js": "/weather-hooks/precache-manifest.ce1f855dbef29cadcebeca68d5ed729a.js",
+    "precache-manifest.1c041ef0bc5f354ad623eb6220fe107c.js": "/weather-hooks/precache-manifest.1c041ef0bc5f354ad623eb6220fe107c.js",
     "service-worker.js": "/weather-hooks/service-worker.js",
     "static/css/main.45774fcf.chunk.css.map": "/weather-hooks/static/css/main.45774fcf.chunk.css.map",
     "static/media/App.css": "/weather-hooks/static/media/bg.c8cc95c6.jpg"
