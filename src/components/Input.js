@@ -18,6 +18,7 @@ function Input({sendLocation, addItem}){
         value={value}
         onChange={e => setValue(e.target.value)}
       />
+      <button onClick={handleSubmit}> Submit </button>
     </form>);};
 
     export default Input;

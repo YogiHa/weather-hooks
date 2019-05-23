@@ -14,9 +14,11 @@ const [list, setList] = useState([]);
   }
 const sendLocation = text => {
   setLocation({text}) 
-  const newList = [...list, {text}]
+   const newList = [...list, {text}]
     setList(newList);
-           
+     }
+  const updateCount = text => {
+     setCount(count + 1)      
   }
   const removeItem = index => {
     const newList = [...list];
@@ -31,10 +33,12 @@ setLocation(index)
       <div className="App">
       <h1> WethWhat? </h1>
           <button onClick={handleClick}> Count: {count} </button>
-          <p> i'm working offline! </p>
+          <h3> i'm working offline! </h3>
+          <p> every time you will search a new location, refresh from the search history or even just click me, </p>
+          <p> i will update :) </p> <br/>
       <h4> displaying temprture by just clicking enter! </h4>
       <Input sendLocation={sendLocation} />
-      <APICall location={location}  />
+      <APICall location={location} updateCount={updateCount} />
       <div>
      {list.map((list, index) => (
           <HistoryItem
