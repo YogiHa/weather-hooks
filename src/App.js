@@ -14,11 +14,13 @@ const [list, setList] = useState([]);
   }
 const sendLocation = text => {
   setLocation({text}) 
-   const newList = [...list, {text}]
-    setList(newList);
-     }
-  const updateCount = text => {
+        }
+  const updateCount = event => {
      setCount(count + 1)      
+  }
+  const updateList = text => {
+    const newList = [...list, {text}]
+    setList(newList);
   }
   const removeItem = index => {
     const newList = [...list];
@@ -27,7 +29,10 @@ const sendLocation = text => {
   }
 
   const researchItem = index => {
-setLocation(index)
+setLocation(index);
+const newList = [...list];
+    newList.splice(index, 1);
+    setList(newList);
   }
     return (
       <div className="App">
@@ -38,7 +43,7 @@ setLocation(index)
           <p> i will update :) </p> <br/>
       <h4> displaying temprture by just clicking enter! </h4>
       <Input sendLocation={sendLocation} />
-      <APICall location={location} updateCount={updateCount} />
+      <APICall location={location} updateCount={updateCount} updateList={updateList} />
       <div>
      {list.map((list, index) => (
           <HistoryItem
