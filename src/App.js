@@ -55,7 +55,8 @@ const sendLocation = text => {
             researchItem={researchItem}
           />
         ))}
-     </div>
+     </div> <br /> <br />
+     <p> for more information <a href="https://github.com/YogiHa/weather-hooks"> https://github.com/YogiHa/weather-hooks</a> </p>
    
       </div>
     );  }
