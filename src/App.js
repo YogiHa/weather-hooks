@@ -7,7 +7,8 @@ import HistoryItem from './components/HistoryItem';
 function App() {
 const [location, setLocation] = useState('');
 const [list, setList] = useState([]);
-  const [count, setCount] = useState(0);
+const [count, setCount] = useState(0);
+
   const handleClick = e => {
     e.preventDefault();
     setCount(count + 1)
@@ -27,14 +28,13 @@ const sendLocation = text => {
     newList.splice(index, 1);
     setList(newList);
   }
-
   const researchItem = (item ,index) => {
    setLocation(item);
    const newList = [...list];
     newList.splice(index, 1);
     setList(newList);
-
   }
+  
     return (
       <div className="App">
       <h1> WethWhat? </h1>

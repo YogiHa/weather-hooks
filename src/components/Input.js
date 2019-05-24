@@ -2,14 +2,15 @@ import React, {useState} from 'react';
 
 function Input({sendLocation, addItem}){
   const [value, setValue] = useState('');
+  
   const handleSubmit = e => {
     e.preventDefault();
     if (!value) return; 
     sendLocation(value);
     setValue("");  };
+
      return (
-    
-    <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}>
       <input
       aria-label= 'type here'
        placeholder='search by city name'

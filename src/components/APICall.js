@@ -5,7 +5,7 @@ import Display from './Display';
 function APICall({location, updateCount, updateList}){
 	let ignore = false;
 	const [data, setData] = useState([]);
-	const apiKey = 'd2cb9ea67b28bb32949f13c1ffb2b803'
+	const apiKey = //Your APIKEY  goes here
 	useEffect(()=> {
 		async function fetchData() {
       const result = await axios(`https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?q=${location.text}&units=metric&appid=${apiKey}`)

@@ -7,7 +7,6 @@ function HistoryItem({ item, index, removeItem, researchItem }) {
       <div>
         <button onClick={() => removeItem(index)}>x</button>
         <button onClick={() => researchItem(item, index)}>r</button>
-
       </div>
     </div>
   );

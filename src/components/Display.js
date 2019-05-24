@@ -1,9 +1,11 @@
 import React, { useState , useEffect } from "react";
+
 function Display({data}){
     const [unit, setUnit] = useState(data.main.temp);
     const [icon, setIcon] = useState(null);
+   
     useEffect(() =>{
-setUnit(data.main.temp);
+              setUnit(data.main.temp);
   if(data.weather[0].main == 'Clouds') {
             setIcon(require('./icons/cloud.png'))
         } else if(data.weather[0].main == 'Rain') {
@@ -12,12 +14,14 @@ setUnit(data.main.temp);
          else {setIcon(require('./icons/Sun.png'))}
 return()=> {isCelzios= true}
     }, [data])
+
      let isCelzios = true;
     const HandleClick = e => {
       e.preventDefault();
        isCelzios= !isCelzios;
-     (!isCelzios) ? setUnit(1.8 * data.main.temp + 32) :
-     setUnit(data.main.temp) }  
+     isCelzios ? setUnit(data.main.temp) :
+     setUnit(1.8 * data.main.temp + 32) }
+
     return <div>
   <article className="mw5 center bg-light-blue br3 pa3 pa4-ns mv3 ba b--black-10">
   <div className="tc">
@@ -29,7 +33,7 @@ return()=> {isCelzios= true}
   </div>
 </article>
 
- </div> }
+          </div> }
        
 
 export default Display;
