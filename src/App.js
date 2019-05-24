@@ -9,14 +9,11 @@ const [location, setLocation] = useState('');
 const [list, setList] = useState([]);
 const [count, setCount] = useState(0);
 
-  const handleClick = e => {
-    e.preventDefault();
-    setCount(count + 1)
-  }
 const sendLocation = text => {
   setLocation({text}) 
         }
   const updateCount = event => {
+     event.preventDefault();
      setCount(count + 1)      
   }
   const updateList = text => {
@@ -38,7 +35,7 @@ const sendLocation = text => {
     return (
       <div className="App">
       <h1> WethWhat? </h1>
-          <button onClick={handleClick}> Count: {count} </button>
+          <button onClick={updateCount}> Count: {count} </button>
           <h3> i'm working offline! </h3>
           <p> every time you will search a new location, refresh from the search history or even just click me, </p>
           <p> i will update :) </p> <br/>
