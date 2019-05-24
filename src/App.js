@@ -28,11 +28,12 @@ const sendLocation = text => {
     setList(newList);
   }
 
-  const researchItem = index => {
-setLocation(index);
-const newList = [...list];
+  const researchItem = (item ,index) => {
+   setLocation(item);
+   const newList = [...list];
     newList.splice(index, 1);
     setList(newList);
+
   }
     return (
       <div className="App">
