@@ -9,9 +9,14 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1",
-    "tachyons": "^4.11.1"
+    "tachyons": "^4.11.1",
+    "chromedriver": "^75.0.0",
+    "geckodriver": "^1.16.2",
+    "mocha": "^6.1.4",
+    "selenium-webdriver": "^4.0.0-alpha.4"
   },
   "scripts": {
+    "s-test": "mocha test",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",

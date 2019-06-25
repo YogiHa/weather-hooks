@@ -12,6 +12,7 @@ function Input({sendLocation, addItem}){
      return (
       <form onSubmit={handleSubmit}>
       <input
+      id= 'test-text'
       aria-label= 'type here'
        placeholder='search by city name'
         type="text"
